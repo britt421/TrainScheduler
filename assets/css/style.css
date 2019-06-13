@@ -1,3 +1,8 @@
+
+body {
+    background-image: url "https://vignette.wikia.nocookie.net/ttte/images/b/b7/ThomasAndStepney5.png/revision/latest?cb=20160929105611";
+}
+
 .display-4 {
     text-align: center;
 }
@@ -9,3 +14,8 @@
 .table {
     margin-bottom: 10rem;
 }
+
+.container {
+    margin-bottom: 90px;
+}
+
