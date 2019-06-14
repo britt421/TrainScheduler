@@ -11,6 +11,8 @@ var start_time = "";
 var fbTime = moment();
 
 //Grabbed values from text boxes
+$("#submit").on("click", function(event){
+event.preventDefault();
 name = $("#name").val().trim();
 destination = $("#destination").val().trim();
 start_time = moment($("#time").val().trim(), "HH:mm").subtract(1, "years").format("X");
@@ -85,9 +87,5 @@ $("body").on("click", "#delete", function(e)){
 
 
 
-// $(#submit).on("click", function(event){
-//     event.preventDefault();
-//     nTrain=$("train name id").val().trim();
 
-// })
 
