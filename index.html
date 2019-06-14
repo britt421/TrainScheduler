@@ -11,9 +11,15 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
     
-    <!-- Firebase References -->
+    <!-- References (jQuery, Moment, and Firebase)-->
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
     <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-database.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
 
 </head>
 <body>
@@ -46,26 +52,28 @@
     <form>
         <div class="form-group">
             <label for="trainName">Train Name</label>
-            <input type="text" class="form-control" id="name">
+            <input type="text" class="form-control" id="name-input">
         </div>
         <div class="form-group">
             <label for="role">Destination</label>
-            <input type="text" class="form-control" id="destination">
+            <input type="text" class="form-control" id="destination-input">
         </div>
         <div class="form-group">
-            <label for="startDate">First Train Time (HH:mm-military time)</label>
-            <input type="time" class="form-control" id="time">
+            <label for="startDate">First Train Time</label>
+            <input type="time" class="form-control" id="time-input">
         </div>
         <div class="form-group">
             <label for="monthlyRate">Frequency (min.)</label>
-            <input type="number" class="form-control" id="minutes">
+            <input type="number" class="form-control" id="frequency-input">
         </div>
     </form>
 </wrapper>
 <button id="submit">Submit</button>
 </div>
 
-<!-- jQuery Link -->
+<!-- app.js linked here -->
+<script src="assets/javascript/app.js"></script>
+
 
 </body>
 </html>

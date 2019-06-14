@@ -9,7 +9,7 @@
         messagingSenderId: "387670615055",
         appId: "1:387670615055:web:54ef7f74037639da"
       };
-        firebase.initializeApp(config);
+        firebase.initializeApp(firebaseConfig);
 
         var database = firebase.database();
 
@@ -20,7 +20,7 @@
         var frequency = "";
         
         // Capture Button Click
-        $("#add-train").on("click", function(event) {
+        $("#submit").on("click", function(event) {
           event.preventDefault();
           
         //Receives input from user
@@ -31,7 +31,7 @@
           frequency = $("#frequency-input").val().trim();
 
         //Changes what is saved in the Firebase Database
-          dataRef.ref().push({
+          database.ref().push({
             name: name,
             destination: destination,
             time: time,
@@ -47,7 +47,7 @@
         });
 
         //Adds changes to server from Firebase
-        dataRef.ref().on("child_added", function(snapshot) {
+        database.ref().on("child_added", function(snapshot) {
           // Log everything that's coming out of snapshot
           console.log(snapshot.val());
           console.log(snapshot.val().name);
